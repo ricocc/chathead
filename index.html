@@ -57,12 +57,12 @@
       </div>
       <div style='display: none'>
         <img id='img' src='' alt='' />
-        <img class='hide' id='hat0' src='static/src/hat7.png' />
-        <img class='hide' id='hat1' src='static/src/hat0.png' />
+        <img class='hide' id='hat0' src='static/src/hat0.png' />
+        <img class='hide' id='hat1' src='static/src/hat1.png' />
         <img class='hide' id='hat2' src='static/src/hat2.png' />
         <img class='hide' id='hat3' src='static/src/hat3.png' />
-        <img class='hide' id='hat4' src='static/src/hat1.png' />
-        <img class='hide' id='hat5' src='static/src/hat4.png' />
+        <img class='hide' id='hat4' src='static/src/hat4.png' />
+        <!-- <img class='hide' id='hat5' src='static/src/hat4.png' />
         <img class='hide' id='hat6' src='static/src/hat5.png' />
         <img class='hide' id='hat7' src='static/src/hat6.png' />
         <img class='hide' id='hat2' src='static/src/hat7.png' />
@@ -72,7 +72,7 @@
         <img class='hide' id='hat6' src='static/src/hat11.png' />
         <img class='hide' id='hat7' src='static/src/hat12.png' />
         <img class='hide' id='hat2' src='static/src/hat13.png' />
-        <img class='hide' id='hat3' src='static/src/hat14.png' />
+        <img class='hide' id='hat3' src='static/src/hat14.png' /> -->
       </div>
     <script src="static/js/main.js"></script>
     <script>
@@ -83,11 +83,9 @@
       var hat = "hat0";
       var canvasFabric;
       var hatInstance;
-      //var screenWidth = window.screen.width < 500 ? window.screen.width : 300;
       var screenWidth = document.getElementById("content").scrollHeight;
       function viewer() {
         var file = document.getElementById("upload").files[0];
-        console.log(file);
         var reader = new FileReader;
         if (file) {
           reader.readAsDataURL(file);
@@ -128,8 +126,8 @@
         if (hatInstance) {
           canvasFabric.remove(hatInstance)
         }
-        console.log(hatImage.width);
-        console.log(100 / hatImage.width);
+        // console.log(hatImage.width);
+        // console.log(100 / hatImage.width);
         hatInstance = new fabric.Image(hatImage, {
           top: 0,
           left: 0,
